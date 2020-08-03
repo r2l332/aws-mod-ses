@@ -37,12 +37,6 @@ variable "domain" {
   description = "SES domain"
 }
 
-variable "main_domain" {
-  type        = string
-  description = "SES domain"
-}
-
-
 variable "rule_name" {
   type        = string
   description = "SES email rule name"

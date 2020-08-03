@@ -13,13 +13,6 @@ resource "aws_ses_domain_dkim" "ses_dkim" {
   domain = aws_ses_domain_identity.ses_verify_domain.domain
 }
 
-# This will need manual verification 
-# resource "aws_ses_domain_identity_verification" "ses_verify" {
-#   count      = var.enable_verification ? 1 : 0
-#   domain     = aws_ses_domain_identity.ses_verify_domain.id
-#   depends_on = [aws_route53_record.verify_txt_alt]
-# }
-
 # SES Email Received Rule
 resource "aws_ses_receipt_rule_set" "ses_rule_set_name" {
   rule_set_name = var.rule_set_name
